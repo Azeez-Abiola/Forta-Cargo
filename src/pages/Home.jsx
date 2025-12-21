@@ -167,7 +167,7 @@ const Home = () => {
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'url("/src/assets/hero_plane.jpg")',
+            backgroundImage: 'url("/hero_plane.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.65
@@ -296,13 +296,13 @@ const Home = () => {
                   whileHover={{ scale: 1.04 }}
                   style={{ width: '45%', height: '340px', borderRadius: '40px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}
                 >
-                  <img src="/src/assets/staff_warehouse_1.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/staff_warehouse_1.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.04 }}
                   style={{ width: '55%', height: '340px', borderRadius: '40px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}
                 >
-                  <img src="/src/assets/staff_warehouse_2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/staff_warehouse_2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </motion.div>
               </div>
               <div style={{ maxWidth: '550px' }}>
@@ -386,7 +386,7 @@ const Home = () => {
 
               <div className="solutions-visual" style={{ position: 'relative', height: '620px' }}>
                 <div style={{ height: '100%', borderRadius: '50px', overflow: 'hidden', position: 'relative', boxShadow: 'var(--shadow-md)' }}>
-                  <img src="/src/assets/port_logistics.jpg" alt="FOTACARGO Logistics Hub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/port_logistics.jpg" alt="FOTACARGO Logistics Hub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(145, 85, 253, 0.25)' }}>
                     <h2 style={{ color: 'white', fontSize: '6rem', fontWeight: 950, letterSpacing: '12px', textShadow: '0 5px 25px rgba(0,0,0,0.5)' }}>FOTACARGO</h2>
                   </div>
@@ -422,7 +422,7 @@ const Home = () => {
                   whileHover={{ scale: 1.03 }}
                   style={{ width: '450px', height: '340px', borderRadius: '45px', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}
                 >
-                  <img src="/src/assets/staff_delivery.jpg" alt="Courier Excellence" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/staff_delivery.jpg" alt="Courier Excellence" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </motion.div>
               </div>
             </div>
@@ -444,10 +444,10 @@ const Home = () => {
               boxShadow: '0 50px 100px rgba(0,0,0,0.08)'
             }}>
               <div style={{ position: 'absolute', left: '80px', top: '50%', transform: 'translateY(-50%)', width: '320px', height: '460px', opacity: 0.35, zIndex: 1, filter: 'grayscale(0.5)' }}>
-                <img src="/src/assets/staff_warehouse_1.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50px' }} />
+                <img src="/staff_warehouse_1.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50px' }} />
               </div>
               <div style={{ position: 'absolute', right: '80px', top: '50%', transform: 'translateY(-50%)', width: '320px', height: '460px', opacity: 0.35, zIndex: 1, filter: 'grayscale(0.5)' }}>
-                <img src="/src/assets/staff_delivery.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50px' }} />
+                <img src="/staff_delivery.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50px' }} />
               </div>
 
               <motion.div

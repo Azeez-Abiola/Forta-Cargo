@@ -33,7 +33,7 @@ function App() {
           <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr repeat(3, 1fr)', gap: '80px', marginBottom: '100px' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px' }}>
-                <img src="/src/assets/logo_icon.png" alt="FOTACARGO" style={{ height: '80px', filter: 'drop-shadow(0 0 15px rgba(145, 85, 253, 0.5)) brightness(1.2)' }} />
+                <img src="/logo_icon.png" alt="FOTACARGO" style={{ height: '80px', filter: 'drop-shadow(0 0 15px rgba(145, 85, 253, 0.5)) brightness(1.2)' }} />
               </div>
               <p style={{ color: '#AAA', fontSize: '1.15rem', maxWidth: '300px', marginBottom: '45px', lineHeight: 1.6, fontWeight: 500 }}>
                 Let's start something shipping, your goods! Professional handling and global reach since 2008.

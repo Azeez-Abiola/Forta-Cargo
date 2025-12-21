@@ -63,7 +63,7 @@ const About = () => {
                             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
                             style={{ position: 'relative', height: '700px', borderRadius: '60px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '1px solid white' }}
                         >
-                            <img src="/src/assets/staff_warehouse_2.jpg" alt="FOTACARGO Operations" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/staff_warehouse_2.jpg" alt="FOTACARGO Operations" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(145, 85, 253, 0.15)' }}>
                                 <h2 style={{ color: 'white', fontSize: '9rem', fontWeight: 950, opacity: 0.85, letterSpacing: '35px', mixBlendMode: 'overlay', pointerEvents: 'none' }}>PRECISION</h2>
                             </div>
@@ -119,9 +119,9 @@ const About = () => {
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }}>
                             {[
-                                { title: "Experience", icon: <Briefcase />, text: "Decades of deep industrial logistics intelligence across 150+ international lanes.", img: "/src/assets/hero_ship_aerial.jpg" },
-                                { title: "Reliability", icon: <Shield />, text: "Total asset protection with 24/7 scannable monitoring and secure verified protocols.", img: "/src/assets/staff_warehouse_1.jpg" },
-                                { title: "Customer-First", icon: <Users />, text: "Strategic coordination tailored to your specific commercial or industrial scale.", img: "/src/assets/port_logistics.jpg" }
+                                { title: "Experience", icon: <Briefcase />, text: "Decades of deep industrial logistics intelligence across 150+ international lanes.", img: "/hero_ship_aerial.jpg" },
+                                { title: "Reliability", icon: <Shield />, text: "Total asset protection with 24/7 scannable monitoring and secure verified protocols.", img: "/staff_warehouse_1.jpg" },
+                                { title: "Customer-First", icon: <Users />, text: "Strategic coordination tailored to your specific commercial or industrial scale.", img: "/port_logistics.jpg" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -148,7 +148,7 @@ const About = () => {
             {/* Final CTA - Slide from Left */}
             <section style={{ padding: '140px 0', backgroundColor: 'var(--secondary)', color: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', inset: 0, opacity: 0.15, zIndex: 0 }}>
-                    <img src="/src/assets/staff_delivery.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src="/staff_delivery.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <ScrollSection direction="left">

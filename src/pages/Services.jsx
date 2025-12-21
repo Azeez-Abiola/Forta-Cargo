@@ -31,7 +31,7 @@ const services = [
         desc: "Reliable sea freight services for international container shipping. We handle everything from port-to-port to door-to-door delivery.",
         included: ["Container tracking", "Customs clearance", "Port logistics"],
         regions: "Worldwide",
-        image: "/src/assets/hero_ship_aerial.jpg"
+        image: "/hero_ship_aerial.jpg"
     },
     {
         icon: <Airplay />,
@@ -39,7 +39,7 @@ const services = [
         desc: "Fast and secure air cargo solutions for urgent shipments. Ideal for high-value and time-sensitive goods.",
         included: ["Express shipping", "Fragile handling", "Airport-to-door"],
         regions: "International",
-        image: "/src/assets/staff_warehouse_2.jpg"
+        image: "/staff_warehouse_2.jpg"
     },
     {
         icon: <Truck />,
@@ -47,7 +47,7 @@ const services = [
         desc: "Comprehensive road transport for local distribution and cross-border trucking within the continent.",
         included: ["Last-mile delivery", "Fleet tracking", "Secure loading"],
         regions: "Continental",
-        image: "/src/assets/staff_delivery.jpg"
+        image: "/staff_delivery.jpg"
     },
     {
         icon: <Package />,
@@ -55,7 +55,7 @@ const services = [
         desc: "Specialized logistics for large-scale industrial and commercial goods. We manage large volumes with precision.",
         included: ["Heavy machinery", "Project cargo", "Oversized shipping"],
         regions: "Global",
-        image: "/src/assets/port_logistics.jpg"
+        image: "/port_logistics.jpg"
     },
     {
         icon: <Briefcase />,
@@ -63,7 +63,7 @@ const services = [
         desc: "Optimized supply chain management for businesses. We handle inventory, warehousing, and distribution.",
         included: ["Warehousing", "Inventory management", "Order fulfillment"],
         regions: "Nationwide",
-        image: "/src/assets/staff_warehouse_1.jpg"
+        image: "/staff_warehouse_1.jpg"
     }
 ];
 
