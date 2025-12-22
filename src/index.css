@@ -20,9 +20,22 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,14 +43,12 @@ body {
   background-color: var(--white);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
   width: 100%;
   position: relative;
 }
 
 /* Prevent any element from causing horizontal scroll */
 main {
-  overflow-x: hidden;
   width: 100%;
 }
 

@@ -81,10 +81,13 @@ function App() {
             .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
           }
           @media (max-width: 600px) {
-            .footer-grid { grid-template-columns: 1fr !important; text-align: center; }
-            .footer-grid div { display: flex; flex-direction: column; align-items: center; }
-            .footer-grid ul { align-items: center; }
+            .footer-grid { grid-template-columns: 1fr !important; text-align: left; gap: 40px !important; }
+            .footer-grid div { display: flex; flex-direction: column; align-items: flex-start; }
+            .footer-grid ul { align-items: flex-start; }
             .footer-grid p { max-width: 100% !important; }
+            footer { padding: 80px 0 40px !important; }
+            [style*="textAlign: 'center'"] { text-align: left !important; }
+            footer img { height: 60px !important; }
           }
         `}</style>
       </footer>

@@ -17,7 +17,7 @@ const ScrollSection = ({ children, direction = "left", delay = 0 }) => {
                 delay,
                 ease: [0.16, 1, 0.3, 1]
             }}
-            style={{ width: '100%', overflow: 'hidden' }}
+            style={{ width: '100%', overflow: 'visible' }}
         >
             {children}
         </motion.div>
@@ -26,7 +26,7 @@ const ScrollSection = ({ children, direction = "left", delay = 0 }) => {
 
 const About = () => {
     return (
-        <div className="about-page" style={{ paddingTop: '160px', backgroundColor: '#FCF8F1' }}>
+        <div className="about-page" style={{ paddingTop: '180px', backgroundColor: '#FCF8F1', overflow: 'visible' }}>
             {/* Hero Section */}
             <section style={{ paddingBottom: '120px' }}>
                 <div className="container">
@@ -39,7 +39,7 @@ const About = () => {
                             <div style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: 'var(--primary)', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 900, color: 'white', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '40px', boxShadow: '0 8px 20px rgba(145, 85, 253, 0.2)' }}>
                                 Who We Are
                             </div>
-                            <h1 style={{ fontSize: '7.5rem', fontWeight: 950, lineHeight: 0.85, marginBottom: '45px', letterSpacing: '-5px' }}>
+                            <h1 style={{ fontSize: '5.5rem', fontWeight: 950, lineHeight: 0.85, marginBottom: '45px', letterSpacing: '-5px' }}>
                                 Moving the <span className="text-purple">World</span> Together
                             </h1>
                             <p style={{ fontSize: '1.5rem', color: '#444', lineHeight: 1.6, marginBottom: '60px', fontWeight: 600 }}>
@@ -61,7 +61,7 @@ const About = () => {
                             initial={{ opacity: 0, scale: 0.95, x: 80 }}
                             animate={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-                            style={{ position: 'relative', height: '700px', borderRadius: '60px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '1px solid white' }}
+                            style={{ position: 'relative', height: '700px', borderRadius: '60px', overflow: 'visible', boxShadow: 'var(--shadow-lg)', border: '1px solid white' }}
                         >
                             <img src="/staff_warehouse_2.jpg" alt="FOTACARGO Operations" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(145, 85, 253, 0.15)' }}>
@@ -126,7 +126,7 @@ const About = () => {
                                 <motion.div
                                     key={i}
                                     whileHover={{ y: -15, boxShadow: 'var(--shadow-md)' }}
-                                    style={{ backgroundColor: 'white', borderRadius: '55px', overflow: 'hidden', border: '1px solid #EEE' }}
+                                    style={{ backgroundColor: 'white', borderRadius: '55px', overflow: 'visible', border: '1px solid #EEE' }}
                                 >
                                     <div style={{ height: '280px', width: '100%' }}>
                                         <img src={item.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -146,7 +146,7 @@ const About = () => {
             </section>
 
             {/* Final CTA - Slide from Left */}
-            <section style={{ padding: '140px 0', backgroundColor: 'var(--secondary)', color: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+            <section style={{ padding: '140px 0', backgroundColor: 'var(--secondary)', color: 'white', textAlign: 'center', position: 'relative', overflow: 'visible' }}>
                 <div style={{ position: 'absolute', inset: 0, opacity: 0.15, zIndex: 0 }}>
                     <img src="/staff_delivery.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
@@ -166,31 +166,37 @@ const About = () => {
 
             <style>{`
         /* Prevent horizontal scroll */
-        .about-page { overflow-x: hidden; width: 100%; }
-        .about-page section { overflow-x: hidden; width: 100%; }
-        .about-page .container { overflow-x: hidden; }
+        /* Prevent horizontal scroll without triggering internal scrollbars */
+        .about-page { width: 100%; }
+        .about-page section { width: 100%; }
+        .about-page .container { position: relative; }
         
         @media (max-width: 992px) {
-            h1 { font-size: 3.5rem !important; line-height: 1 !important; margin-bottom: 30px !important; letter-spacing: -2px !important; }
-            h2 { font-size: 2.8rem !important; letter-spacing: -1px !important; }
-            p { font-size: 1.1rem !important; }
-            section { padding: 60px 0 !important; }
+            div[style*="paddingTop: 180px"] { padding-top: 120px !important; }
+            h1 { font-size: 3.2rem !important; line-height: 1 !important; margin-bottom: 30px !important; letter-spacing: -2px !important; }
+            h2 { font-size: 2.5rem !important; }
+            section { padding: 40px 0 !important; }
             .container { padding: 0 20px !important; max-width: 100% !important; }
+            
+            /* Grid layouts */
             .container > div { grid-template-columns: 1fr !important; gap: 30px !important; }
-            [style*="height: 700px"] { height: 350px !important; border-radius: 30px !important; }
-            [style*="fontSize: 9rem"] { font-size: 2.8rem !important; letter-spacing: 12px !important; }
-            [style*="fontSize: 7.5rem"] { font-size: 3.2rem !important; }
-            [style*="padding: 90px 70px"] { padding: 40px 24px !important; border-radius: 30px !important; }
-            [style*="padding: 64px 52px"] { padding: 40px 28px !important; }
-            [style*="fontSize: 4.2rem"] { font-size: 2.5rem !important; }
-            [style*="fontSize: 5.5rem"] { font-size: 2.8rem !important; }
-            [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; gap: 30px !important; }
-            .about-page { padding-top: 120px !important; }
+            [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+            [style*="grid-template-columns: 1fr 1.2fr"], [style*="grid-template-columns: 1.2fr 1fr"] { grid-template-columns: 1fr !important; }
+            
+            /* Stats Stacking */
+            [style*="display: flex; gap: 40px; margin-top: 60px"] { flex-direction: column !important; gap: 20px !important; margin-top: 30px !important; }
+            [style*="flex: 1"] { width: 100% !important; }
+            
+            /* Images */
+            [style*="height: 700px"] { height: 350px !important; margin-top: 40px; }
+            [style*="height: 280px"] { height: 200px !important; }
         }
+        
         @media (max-width: 600px) {
-            h1 { font-size: 2.5rem !important; }
+            div[style*="paddingTop: 120px"] { padding-top: 110px !important; }
+            h1 { font-size: 2.4rem !important; letter-spacing: -1px !important; }
             h2 { font-size: 2rem !important; }
-            section { padding: 48px 0 !important; }
+            section { padding: 30px 0 !important; }
             .container { padding: 0 16px !important; }
             .btn { width: 100%; text-align: center; padding: 18px 24px !important; }
             [style*="display: flex; gap: 32px"] { flex-direction: column !important; gap: 20px !important; }

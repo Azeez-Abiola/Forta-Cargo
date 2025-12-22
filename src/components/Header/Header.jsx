@@ -33,7 +33,7 @@ const Header = () => {
             zIndex: 1000,
             transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
             pointerEvents: 'none',
-            paddingTop: isScrolled ? '10px' : '25px'
+            paddingTop: isScrolled ? '6px' : '15px'
         }}>
             <div className="header-outer-container" style={{
                 display: 'flex',
@@ -49,7 +49,7 @@ const Header = () => {
                     maxWidth: '1200px',
                     backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.7)' : 'rgba(255, 255, 255, 0.4)',
                     backdropFilter: 'blur(15px)',
-                    padding: '18px 40px',
+                    padding: '12px 35px',
                     borderRadius: '100px',
                     border: '1.5px solid var(--primary)',
                     boxShadow: '0 12px 40px rgba(145, 85, 253, 0.2)',
@@ -62,7 +62,7 @@ const Header = () => {
                             alt="FOTACARGO"
                             className="logo-img"
                             style={{
-                                height: '85px',
+                                height: '65px',
                                 filter: 'drop-shadow(0 0 12px rgba(145, 85, 253, 0.6)) brightness(1.2)',
                                 transition: 'transform 0.3s ease'
                             }}
@@ -202,7 +202,7 @@ const Header = () => {
                             </div>
 
                             {/* Navigation Links */}
-                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: 'auto' }}>
+                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '25px' }}>
                                 {[
                                     { label: 'Home', path: '/' },
                                     { label: 'About Us', path: '/about' },
@@ -221,9 +221,9 @@ const Header = () => {
                                                 color: '#1A1A1A',
                                                 display: 'flex',
                                                 alignItems: 'center',
-                                                padding: '18px 20px',
+                                                padding: '14px 20px',
                                                 borderRadius: '16px',
-                                                fontSize: '1.3rem',
+                                                fontSize: '1.2rem',
                                                 fontWeight: 700,
                                                 transition: 'all 0.3s ease',
                                                 background: 'transparent'
@@ -249,20 +249,22 @@ const Header = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.4, duration: 0.3 }}
+                                transition={{ delay: 0.3, duration: 0.3 }}
                             >
                                 <Link
                                     to="/quote"
                                     className="btn btn-primary"
                                     style={{
-                                        width: '100%',
+                                        width: 'calc(100% - 20px)',
+                                        margin: '0 10px',
                                         display: 'flex',
                                         justifyContent: 'center',
-                                        padding: '20px',
-                                        fontSize: '1.1rem',
+                                        padding: '16px 20px',
+                                        fontSize: '1rem',
                                         borderRadius: '16px',
                                         fontWeight: 900,
-                                        boxShadow: '0 8px 20px rgba(145, 85, 253, 0.3)'
+                                        boxShadow: '0 8px 20px rgba(145, 85, 253, 0.3)',
+                                        boxSizing: 'border-box'
                                     }}
                                     onClick={() => setMobileMenuOpen(false)}
                                 >

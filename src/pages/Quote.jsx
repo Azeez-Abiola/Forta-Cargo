@@ -68,10 +68,10 @@ const Quote = () => {
     }
 
     return (
-        <div style={{ paddingTop: '160px', backgroundColor: '#FCF8F1', minHeight: '100vh' }}>
+        <div style={{ paddingTop: '180px', backgroundColor: '#FCF8F1', minHeight: '100vh' }}>
             <div className="container" style={{ maxWidth: '1100px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-                    <h1 style={{ fontSize: '5.5rem', fontWeight: 950, letterSpacing: '-3px', marginBottom: '24px' }}>Get A <span className="text-purple">Quick Quote</span></h1>
+                    <h1 style={{ fontSize: '4.2rem', fontWeight: 950, letterSpacing: '-3px', marginBottom: '24px' }}>Get A <span className="text-purple">Quick Quote</span></h1>
                     <p style={{ fontSize: '1.4rem', color: '#555', fontWeight: 500 }}>Professional logistics pricing in minutes.</p>
                 </div>
 
@@ -230,9 +230,10 @@ const Quote = () => {
                 .container { overflow-x: hidden; }
                 
                 @media (max-width: 992px) {
-                    h1 { font-size: 3.5rem !important; line-height: 1 !important; margin-bottom: 30px !important; }
+                    div[style*="paddingTop: 180px"] { padding-top: 120px !important; }
+                    h1 { font-size: 3.2rem !important; line-height: 1 !important; margin-bottom: 30px !important; }
                     p { font-size: 1.1rem !important; }
-                    section { padding: 60px 0 !important; }
+                    section { padding: 40px 0 !important; }
                     .container { padding: 0 20px !important; max-width: 100% !important; }
                     [style*="padding: 64px"] { padding: 24px !important; }
                     [style*="padding: 56px"], [style*="padding: 48px"] { padding: 24px !important; }
@@ -240,11 +241,12 @@ const Quote = () => {
                     [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; gap: 20px !important; }
                     [style*="padding: 32px"] { padding: 16px 12px !important; font-size: 0.9rem !important; text-align: center; }
                     [style*="gap: 20px"] { flex-wrap: wrap; justify-content: center; gap: 12px !important; }
-                    [style*="fontSize: 5.5rem"] { font-size: 3rem !important; }
+                    [style*="fontSize: 4.2rem"] { font-size: 2.8rem !important; }
                 }
                 @media (max-width: 600px) {
+                    div[style*="paddingTop: 120px"] { padding-top: 110px !important; }
                     h1 { font-size: 2.5rem !important; }
-                    section { padding: 48px 0 !important; }
+                    section { padding: 30px 0 !important; }
                     .container { padding: 0 16px !important; }
                     [style*="padding: 32px"] { flex-direction: column !important; gap: 8px !important; }
                     [style*="borderLeft: 1px solid #EEE"] { border-left: none !important; border-top: 1px solid #EEE !important; }

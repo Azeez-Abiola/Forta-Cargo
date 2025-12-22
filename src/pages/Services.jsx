@@ -17,7 +17,7 @@ const ScrollSection = ({ children, direction = "left", delay = 0 }) => {
                 delay,
                 ease: [0.16, 1, 0.3, 1]
             }}
-            style={{ width: '100%', overflow: 'hidden' }}
+            style={{ width: '100%', overflow: 'visible' }}
         >
             {children}
         </motion.div>
@@ -69,14 +69,14 @@ const services = [
 
 const Services = () => {
     return (
-        <div style={{ paddingTop: '160px', backgroundColor: '#FCF8F1' }}>
+        <div className="services-page" style={{ paddingTop: '180px', backgroundColor: '#FCF8F1', overflow: 'visible' }}>
             <ScrollSection direction="left">
-                <div className="container" style={{ textAlign: 'center', marginBottom: '100px' }}>
+                <div className="container" style={{ textAlign: 'center', marginBottom: '40px' }}>
                     <div style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: 'var(--primary)', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 900, color: 'white', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '32px', boxShadow: '0 8px 20px rgba(145, 85, 253, 0.2)' }}>
                         Our Solutions
                     </div>
                     <motion.h1
-                        style={{ fontSize: '6rem', fontWeight: 950, marginBottom: '32px', lineHeight: 0.9, letterSpacing: '-4px' }}
+                        style={{ fontSize: '4.8rem', fontWeight: 950, marginBottom: '32px', lineHeight: 0.9, letterSpacing: '-4px' }}
                     >
                         Our <span className="text-purple">Logistics</span> Services
                     </motion.h1>
@@ -101,7 +101,7 @@ const Services = () => {
                                     borderRadius: '60px',
                                     boxShadow: 'var(--shadow-sm)',
                                     border: '1px solid #EEE',
-                                    overflow: 'hidden'
+                                    overflow: 'visible'
                                 }}
                             >
                                 <div style={{ order: index % 2 === 0 ? 1 : 2 }}>
@@ -148,7 +148,7 @@ const Services = () => {
                                         position: 'relative',
                                         height: '620px',
                                         borderRadius: '50px',
-                                        overflow: 'hidden',
+                                        overflow: 'visible',
                                         boxShadow: 'var(--shadow-md)',
                                         border: '1px solid #EEE'
                                     }}
@@ -169,7 +169,7 @@ const Services = () => {
 
             {/* Final CTA */}
             <ScrollSection direction="left">
-                <section style={{ backgroundColor: '#111', color: 'white', padding: '140px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+                <section style={{ backgroundColor: '#111', color: 'white', padding: '140px 0', textAlign: 'center', position: 'relative', overflow: 'visible' }}>
                     <div className="container">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -188,42 +188,22 @@ const Services = () => {
 
             <style>{`
                 /* Prevent horizontal scroll */
-                .services-page, section { overflow-x: hidden; width: 100%; }
-                .container { overflow-x: hidden; }
+                /* Prevent horizontal scroll cleanly without triggering internal scrollbars */
+                .services-page, section { width: 100%; }
+                .container { position: relative; }
                 
                 @media (max-width: 992px) {
-                    h1 { font-size: 3.5rem !important; margin-bottom: 24px !important; line-height: 1 !important; }
-                    h2 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+                    div[style*="paddingTop: 180px"] { padding-top: 120px !important; }
+                    h1 { font-size: 3.2rem !important; margin-bottom: 24px !important; line-height: 1 !important; }
+                    h2 { font-size: 2.5rem !important; }
                     p { font-size: 1.1rem !important; }
-                    section { padding: 60px 0 !important; }
+                    section { padding: 40px 0 !important; }
                     .container { padding: 0 20px !important; max-width: 100% !important; }
                     
-                    /* Service cards - force single column */
-                    .container > div > div[style*="grid-template-columns"] {
+                    /* Grid layouts */
+                    .container > div { grid-template-columns: 1fr !important; gap: 30px !important; }
+                    [style*="grid-template-columns: 1fr 1.2fr"], [style*="grid-template-columns: 1.2fr 1fr"] {
                         grid-template-columns: 1fr !important;
-                        gap: 32px !important;
-                        padding: 40px 32px !important;
-                        border-radius: 40px !important;
-                    }
-                    
-                    /* Reorder - image first, content second */
-                    [style*="order: 2"], [style*="order: 1"] { 
-                        order: 0 !important; 
-                    }
-                    
-                    /* Image sizing */
-                    [style*="height: 620px"] { 
-                        height: 300px !important; 
-                        border-radius: 30px !important;
-                    }
-                    
-                    /* Padding adjustments */
-                    [style*="padding: 72px"] { padding: 40px 32px !important; }
-                    [style*="padding: 64px"] { padding: 32px !important; }
-                    
-                    /* Scope badge */
-                    [style*="padding: 20px 32px"] { 
-                        padding: 16px 24px !important; 
                         font-size: 0.85rem !important;
                     }
                 }

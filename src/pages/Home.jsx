@@ -28,7 +28,7 @@ const ScrollSection = ({ children, direction = "left", delay = 0 }) => {
 const CountUp = ({ value, duration = 2 }) => {
   const [count, setCount] = useState(0);
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -146,16 +146,14 @@ if (typeof document !== 'undefined' && !document.head.querySelector('style[data-
 
 const Home = () => {
   return (
-    <div className="home-page" style={{ backgroundColor: '#FCF8F1' }}>
+    <div className="home-page" style={{ backgroundColor: '#FCF8F1', overflow: 'visible' }}>
       {/* Cinematic Fullscreen Hero - Preserving v6 refined version */}
       <section className="hero" style={{
         position: 'relative',
-        height: 'auto',
         minHeight: '100vh',
         width: '100%',
         display: 'flex',
         alignItems: 'center',
-        overflow: 'hidden',
         background: '#000',
         boxSizing: 'border-box',
         padding: '150px 0 80px',
@@ -179,25 +177,25 @@ const Home = () => {
           background: 'radial-gradient(circle at 20% 50%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%)'
         }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 10, paddingTop: '60px', paddingLeft: 0, paddingRight: 0, maxWidth: '100vw', boxSizing: 'border-box' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            style={{ maxWidth: '1100px' }}
+            style={{ maxWidth: '1000px' }}
           >
             <div style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: 'rgba(145, 85, 253, 0.85)', backdropFilter: 'blur(10px)', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 900, color: 'white', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '40px', border: '1px solid rgba(255,255,255,0.2)' }}>
               Elite Logistics Network
             </div>
-            <h1 style={{ fontSize: '2.2rem', fontWeight: 950, lineHeight: 1.1, margin: 0, color: 'white', letterSpacing: '-1px', marginBottom: '30px', textShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
+            <h1 style={{ fontSize: '4.5rem', fontWeight: 950, lineHeight: 1.1, margin: 0, color: 'white', letterSpacing: '-3px', marginBottom: '30px', textShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
               Reliable Cargo & Logistics Solutions<br /><span className="text-purple" style={{ color: 'var(--primary)', filter: 'brightness(1.5)' }}>Across Borders.</span>
             </h1>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.9)', marginBottom: '30px', lineHeight: '1.4', fontWeight: 600, maxWidth: '95vw' }}>
+            <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', marginBottom: '48px', lineHeight: '1.7', fontWeight: 500, maxWidth: '580px' }}>
               FOTACARGO engineers global connectivity with military-grade precision and real-time distribution intelligence.
             </p>
 
-            <div className="hero-content-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', width: '100%' }}>
-              <Link to="/quote" className="btn btn-primary" style={{ padding: '16px 0', borderRadius: '24px', fontSize: '1rem', fontWeight: 900, boxShadow: '0 8px 20px rgba(145, 85, 253, 0.2)', width: '100%' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+              <Link to="/quote" className="btn btn-primary" style={{ padding: '18px 48px', borderRadius: '16px', fontSize: '1.1rem', fontWeight: 900, boxShadow: '0 8px 20px rgba(145, 85, 253, 0.4)' }}>
                 Get a Quote
               </Link>
               <AvatarStack />
@@ -206,6 +204,7 @@ const Home = () => {
         </div>
 
         <motion.div
+          className="hero-scroll-indicator"
           animate={{ y: [0, 15, 0] }}
           transition={{ repeat: Infinity, duration: 2.5 }}
           style={{
@@ -228,15 +227,13 @@ const Home = () => {
 
       {/* Why FOTACARGO (v5 Structure reversed back) - Slide Left */}
       <ScrollSection direction="left">
-        <div className="container" style={{ padding: '120px 0', marginTop: '60px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '4.8rem', fontWeight: 950, lineHeight: 0.95, marginBottom: '32px', letterSpacing: '-2px' }}>Why<br />FOTACARGO</h2>
-            <p style={{ color: '#444', maxWidth: '600px', margin: '0 auto 48px', fontSize: '1.25rem', lineHeight: 1.6, fontWeight: 500 }}>
-              We orchestrate trade with precision and elite handling performance.
-            </p>
-          </div>
+        <div className="container" style={{ padding: '120px 0' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(350px, 1fr) 2fr', gap: '80px' }}>
-            <div style={{ textAlign: 'center' }}>
+            <div className="why-section-header">
+              <h2 className="why-header" style={{ fontSize: '4.8rem', fontWeight: 950, lineHeight: 0.95, marginBottom: '32px', letterSpacing: '-2px' }}>Why<span className="desktop-br"><br /></span> FOTACARGO<span className="mobile-only-q">?</span></h2>
+              <p style={{ color: '#444', marginBottom: '48px', maxWidth: '320px', fontSize: '1.25rem', lineHeight: 1.6, fontWeight: 500 }}>
+                We orchestrate trade with precision and elite handling performance.
+              </p>
               <Link to="/services" className="btn btn-primary" style={{ padding: '18px 48px', borderRadius: '16px' }}>
                 Explore Services
               </Link>
@@ -290,7 +287,7 @@ const Home = () => {
       <section style={{ backgroundColor: '#000', color: 'white', padding: '120px 0' }}>
         <ScrollSection direction="right">
           <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', gap: '80px', marginBottom: '100px' }}>
+            <div className="journey-header-wrapper" style={{ display: 'flex', justifyContent: 'space-between', gap: '80px', marginBottom: '100px' }}>
               <div className="working-process-images" style={{ display: 'flex', gap: '30px', flex: 1 }}>
                 <motion.div
                   whileHover={{ scale: 1.04 }}
@@ -305,7 +302,7 @@ const Home = () => {
                   <img src="/staff_warehouse_2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </motion.div>
               </div>
-              <div style={{ maxWidth: '550px' }}>
+              <div className="journey-text-content" style={{ maxWidth: '550px' }}>
                 <div style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: 'rgba(145, 85, 253, 0.1)', border: '1px solid var(--primary)', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '2.5px', marginBottom: '32px' }}>
                   The Journey
                 </div>
@@ -402,16 +399,16 @@ const Home = () => {
         <div style={{ padding: '120px 0', backgroundColor: 'white' }}>
           <div className="container">
             <div style={{ marginBottom: '60px' }}>
-              <div style={{ background: '#F9F9F9', padding: '100px 80px', borderRadius: '60px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: 'inset 0 4px 15px rgba(0,0,0,0.03)', border: '1px solid #EEE' }}>
+              <div className="delivery-flex-container" style={{ background: '#F9F9F9', padding: '100px 80px', borderRadius: '60px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: 'inset 0 4px 15px rgba(0,0,0,0.03)', border: '1px solid #EEE' }}>
                 <div style={{ maxWidth: '550px' }}>
                   <div style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: 'var(--accent)', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '28px' }}>Performance</div>
-                  <h3 style={{ fontSize: '4.2rem', fontWeight: 950, lineHeight: 1.1, marginBottom: '24px' }}>Proven On Time Delivery</h3>
+                  <h3 className="delivery-header" style={{ fontSize: '4.2rem', fontWeight: 950, lineHeight: 1.1, marginBottom: '24px' }}>Proven On Time Delivery</h3>
                   <p style={{ color: 'var(--primary)', fontSize: '1.8rem', fontWeight: 900, marginBottom: '45px' }}>
                     <CountUp value="2,500" /> Deliveries Completed This Cycle
                   </p>
                   <div style={{ display: 'flex', gap: '48px' }}>
                     <div>
-                      <h4 style={{ fontSize: '5.2rem', fontWeight: 950, color: '#111', margin: 0 }}>
+                      <h4 className="delivery-stat-number" style={{ fontSize: '5.2rem', fontWeight: 950, color: '#111', margin: 0 }}>
                         <CountUp value="10,000+" />
                       </h4>
                       <p style={{ fontSize: '1.05rem', color: '#999', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Global Shipments</p>
@@ -474,13 +471,14 @@ const Home = () => {
       </ScrollSection>
       <style>{`
         /* Prevent horizontal scroll ONLY on page wrapper */
-        .home-page { overflow-x: hidden; width: 100%; }
+        .home-page { width: 100%; }
         
         @media (max-width: 992px) {
-            h1 { font-size: 3.5rem !important; line-height: 1 !important; margin-bottom: 30px !important; }
-            h2 { font-size: 2.8rem !important; }
+            .home-page { padding-top: 0 !important; }
+            h1 { font-size: 3.2rem !important; line-height: 1 !important; margin-bottom: 24px !important; }
+            h2 { font-size: 2.5rem !important; }
             p { font-size: 1.1rem !important; }
-            section { padding: 60px 0 !important; }
+            section { padding: 40px 0 !important; }
             .container { padding: 0 20px !important; max-width: 100% !important; }
             
             /* Grid layouts */
@@ -488,9 +486,33 @@ const Home = () => {
             .why-cards-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
             .working-process-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
             
+            /* Removed Hero elements */
+            .hero-scroll-indicator { display: none !important; }
+
+            /* Hero Actions stack spacing */
+            .hero-actions { flex-direction: column !important; align-items: flex-start !important; gap: 32px !important; }
+
+            /* Why FOTACARGO reordering & styling */
+            .why-section-header { text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; margin-top: 80px !important; }
+            .why-section-header p { max-width: 100% !important; }
+            .why-header { font-size: 2.8rem !important; }
+            .desktop-br { display: none !important; }
+            .mobile-only-q { display: inline !important; }
+
+            /* Journey Section reordering (Text first) */
+            .journey-header-wrapper { display: flex !important; flex-direction: column-reverse !important; gap: 32px !important; text-align: center !important; align-items: center !important; }
+            .journey-text-content { max-width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
+
+            /* On Time Delivery reordering & font sizes */
+            .delivery-flex-container { flex-direction: column-reverse !important; gap: 32px !important; text-align: center !important; align-items: center !important; }
+            .delivery-flex-container > div:first-of-type { max-width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
+            .delivery-header { font-size: 2.2rem !important; }
+            .delivery-stat-number { font-size: 3.5rem !important; }
+            [style*="fontSize: 1.8rem"] { font-size: 1.2rem !important; }
+
             /* Fix for Hero */
             .hero { height: auto !important; min-height: 100vh; padding: 120px 0 60px !important; }
-            .hero h1 { font-size: 3.2rem !important; line-height: 1.1 !important; }
+            .hero h1 { font-size: 2.8rem !important; line-height: 1.1 !important; }
             .hero p { font-size: 1.1rem !important; }
             .hero-content-wrapper { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; }
             .avatar-stack-container { flex-direction: row !important; align-items: center !important; margin-top: 16px; }
@@ -515,13 +537,16 @@ const Home = () => {
             /* Images */
             .solutions-visual { height: 320px !important; }
             [style*="height: 620px"], [style*="height: 700px"] { height: 300px !important; }
-            [style*="height: 340px"] { height: 200px !important; }
+            [style*="height: 340px"] { height: 160px !important; }
             [style*="height: 460px"] { height: 300px !important; display: none; }
             
             /* CTA section */
             .cta-images { display: none !important; }
             [style*="left: 80px"], [style*="right: 80px"] { display: none !important; }
         }
+
+        /* Desktop-only hidden elements */
+        .mobile-only-q { display: none; }
         
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem !important; }
