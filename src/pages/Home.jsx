@@ -191,7 +191,7 @@ const Home = () => {
               Reliable Cargo & Logistics Solutions<br /><span className="text-purple" style={{ color: 'var(--primary)', filter: 'brightness(1.5)' }}>Across Borders.</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', marginBottom: '48px', lineHeight: '1.7', fontWeight: 500, maxWidth: '580px' }}>
-              FOTACARGO engineers global connectivity with military-grade precision and real-time distribution intelligence.
+              FOTA CARGO engineers global connectivity with military-grade precision and real-time distribution intelligence.
             </p>
 
             <div className="hero-actions" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
@@ -230,7 +230,7 @@ const Home = () => {
         <div className="container" style={{ padding: '120px 0' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(350px, 1fr) 2fr', gap: '80px' }}>
             <div className="why-section-header">
-              <h2 className="why-header" style={{ fontSize: '4.8rem', fontWeight: 950, lineHeight: 0.95, marginBottom: '32px', letterSpacing: '-2px' }}>Why<span className="desktop-br"><br /></span> FOTACARGO<span className="mobile-only-q">?</span></h2>
+              <h2 className="why-header" style={{ fontSize: '4.8rem', fontWeight: 950, lineHeight: 0.95, marginBottom: '32px', letterSpacing: '-2px' }}>Why<span className="desktop-br"><br /></span> FOTA CARGO<span className="mobile-only-q">?</span></h2>
               <p style={{ color: '#444', marginBottom: '48px', maxWidth: '320px', fontSize: '1.25rem', lineHeight: 1.6, fontWeight: 500 }}>
                 We orchestrate trade with precision and elite handling performance.
               </p>
@@ -385,9 +385,9 @@ const Home = () => {
 
               <div className="solutions-visual" style={{ position: 'relative', height: '620px' }}>
                 <div style={{ height: '100%', borderRadius: '50px', overflow: 'hidden', position: 'relative', boxShadow: 'var(--shadow-md)' }}>
-                  <img src="/port_logistics.jpg" alt="FOTACARGO Logistics Hub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/port_logistics.jpg" alt="FOTA CARGO Logistics Hub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(145, 85, 253, 0.25)' }}>
-                    <h2 style={{ color: 'white', fontSize: '6rem', fontWeight: 950, letterSpacing: '12px', textShadow: '0 5px 25px rgba(0,0,0,0.5)' }}>FOTACARGO</h2>
+                    <h2 style={{ color: 'white', fontSize: '6rem', fontWeight: 950, letterSpacing: '12px', textShadow: '0 5px 25px rgba(0,0,0,0.5)' }}>FOTA CARGO</h2>
                   </div>
                 </div>
               </div>
@@ -495,7 +495,7 @@ const Home = () => {
             /* Hero Actions stack spacing */
             .hero-actions { flex-direction: column !important; align-items: flex-start !important; gap: 32px !important; }
 
-            /* Why FOTACARGO reordering & styling */
+            /* Why FOTA CARGO reordering & styling */
             .why-section-header { text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; margin-top: 80px !important; }
             .why-section-header p { max-width: 100% !important; }
             .why-header { font-size: 2.8rem !important; }

@@ -43,7 +43,7 @@ const About = () => {
                                 Moving the <span className="text-purple">World</span> Together
                             </h1>
                             <p style={{ fontSize: '1.5rem', color: '#444', lineHeight: 1.6, marginBottom: '60px', fontWeight: 600 }}>
-                                At FOTACARGO, we engineer global connectivity. our mission is to accelerate trade by providing the world's most intelligent logistics architecture.
+                                At FOTA CARGO, we engineer global connectivity. our mission is to accelerate trade by providing the world's most intelligent logistics architecture.
                             </p>
                             <div style={{ display: 'flex', gap: '32px' }}>
                                 <div style={{ padding: '45px 35px', backgroundColor: 'white', borderRadius: '40px', flex: 1, boxShadow: 'var(--shadow-sm)', border: '1px solid #EEE' }}>
@@ -63,7 +63,7 @@ const About = () => {
                             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
                             style={{ position: 'relative', height: '700px', borderRadius: '60px', overflow: 'visible', boxShadow: 'var(--shadow-lg)', border: '1px solid white' }}
                         >
-                            <img src="/staff_warehouse_2.jpg" alt="FOTACARGO Operations" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/staff_warehouse_2.jpg" alt="FOTA CARGO Operations" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(145, 85, 253, 0.15)' }}>
                                 <h2 style={{ color: 'white', fontSize: '9rem', fontWeight: 950, opacity: 0.85, letterSpacing: '35px', mixBlendMode: 'overlay', pointerEvents: 'none' }}>PRECISION</h2>
                             </div>
@@ -157,7 +157,7 @@ const About = () => {
                         </div>
                         <h2 style={{ fontSize: '5.5rem', fontWeight: 950, marginBottom: '45px', letterSpacing: '-3px' }}>Define Your Global Reach</h2>
                         <p style={{ fontSize: '1.6rem', opacity: 0.9, marginBottom: '70px', maxWidth: '900px', margin: '0 auto 70px', fontWeight: 600, lineHeight: 1.5 }}>
-                            Join the matrix of elite enterprises powered by FOTACARGO logistics architecture.
+                            Join the matrix of elite enterprises powered by FOTA CARGO logistics architecture.
                         </p>
                         <Link to="/quote" className="btn btn-primary" style={{ padding: '28px 90px', borderRadius: '24px', fontSize: '1.5rem', fontWeight: 900, boxShadow: '0 25px 50px rgba(0,0,0,0.3)' }}>Get a Quote</Link>
                     </ScrollSection>

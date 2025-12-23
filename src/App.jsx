@@ -33,7 +33,7 @@ function App() {
           <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr repeat(3, 1fr)', gap: '80px', marginBottom: '100px' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px' }}>
-                <img src="/logo_icon.png" alt="FOTACARGO" style={{ height: '80px', filter: 'drop-shadow(0 0 15px rgba(145, 85, 253, 0.5)) brightness(1.2)' }} />
+                <img src="/logo_icon.png" alt="FOTA CARGO" style={{ height: '80px', filter: 'drop-shadow(0 0 15px rgba(145, 85, 253, 0.5)) brightness(1.2)' }} />
               </div>
               <p style={{ color: '#AAA', fontSize: '1.15rem', maxWidth: '300px', marginBottom: '45px', lineHeight: 1.6, fontWeight: 500 }}>
                 Let's start something shipping, your goods! Professional handling and global reach since 2008.
@@ -69,8 +69,9 @@ function App() {
               </ul>
             </div>
           </div>
+
           <div style={{ borderTop: '1px solid #1A1A1A', paddingTop: '40px', textAlign: 'center', color: '#666', fontSize: '0.9rem', fontWeight: 500 }}>
-            © {new Date().getFullYear()} FOTACARGO Ltd. All rights reserved.
+            © {new Date().getFullYear()} FOTA CARGO Ltd. All rights reserved.
           </div>
         </div>
         <style>{`
@@ -81,7 +82,7 @@ function App() {
             .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
           }
           @media (max-width: 600px) {
-            .footer-grid { grid-template-columns: 1fr !important; text-align: left; gap: 40px !important; }
+            .footer-grid { grid-template-columns: 1fr !important; text-align: left; gap: 40px !important; margin-bottom: 40px !important; }
             .footer-grid div { display: flex; flex-direction: column; align-items: flex-start; }
             .footer-grid ul { align-items: flex-start; }
             .footer-grid p { max-width: 100% !important; }
@@ -91,7 +92,7 @@ function App() {
           }
         `}</style>
       </footer>
-    </Router>
+    </Router >
   );
 }
 

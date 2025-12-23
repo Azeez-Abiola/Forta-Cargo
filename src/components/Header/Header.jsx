@@ -59,7 +59,7 @@ const Header = () => {
                     <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
                         <img
                             src="/logo_icon.png"
-                            alt="FOTACARGO"
+                            alt="FOTA CARGO"
                             className="logo-img"
                             style={{
                                 height: '65px',
@@ -178,7 +178,7 @@ const Header = () => {
                         >
                             {/* Header with Close Button */}
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '50px' }}>
-                                <img src="/logo_icon.png" alt="FOTACARGO" style={{ height: '50px' }} />
+                                <img src="/logo_icon.png" alt="FOTA CARGO" style={{ height: '50px' }} />
                                 <motion.button
                                     whileHover={{ scale: 1.1, rotate: 90 }}
                                     whileTap={{ scale: 0.9 }}

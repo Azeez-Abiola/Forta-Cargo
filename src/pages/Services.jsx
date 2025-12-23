@@ -81,7 +81,7 @@ const Services = () => {
                         Our <span className="text-purple">Logistics</span> Services
                     </motion.h1>
                     <p style={{ maxWidth: '750px', margin: '0 auto', color: '#444', fontSize: '1.45rem', lineHeight: 1.6, fontWeight: 600 }}>
-                        FOTACARGO provides elite-tier logistics architectures designed for the modern global trade environment.
+                        FOTA CARGO provides elite-tier logistics architectures designed for the modern global trade environment.
                     </p>
                 </div>
             </ScrollSection>
