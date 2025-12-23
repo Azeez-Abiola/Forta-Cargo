@@ -70,7 +70,7 @@ function App() {
             </div>
           </div>
           <div style={{ borderTop: '1px solid #1A1A1A', paddingTop: '40px', textAlign: 'center', color: '#666', fontSize: '0.9rem', fontWeight: 500 }}>
-            © {new Date().getFullYear()} Forta Cargo Ltd. All rights reserved.
+            © {new Date().getFullYear()} FOTACARGO Ltd. All rights reserved.
           </div>
         </div>
         <style>{`

@@ -256,6 +256,7 @@ const Home = () => {
                     boxShadow: '0 30px 60px rgba(145, 85, 253, 0.45)'
                   }}
                   transition={{ type: 'spring', stiffness: 350, damping: 22 }}
+                  className="why-card"
                   style={{
                     padding: '56px 48px',
                     backgroundColor: '#FFFFFF',
@@ -352,6 +353,7 @@ const Home = () => {
                       backgroundColor: 'var(--primary)',
                       color: 'white'
                     }}
+                    className="solution-card"
                     style={{
                       padding: '48px',
                       backgroundColor: 'white',
@@ -365,7 +367,7 @@ const Home = () => {
                       border: '1px solid #EEE'
                     }}
                   >
-                    <div style={{
+                    <div className="solution-icon-wrapper" style={{
                       padding: '20px',
                       backgroundColor: 'var(--accent)',
                       borderRadius: '24px',
@@ -417,6 +419,7 @@ const Home = () => {
                 </div>
                 <motion.div
                   whileHover={{ scale: 1.03 }}
+                  className="delivery-image-container"
                   style={{ width: '450px', height: '340px', borderRadius: '45px', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}
                 >
                   <img src="/staff_delivery.jpg" alt="Courier Excellence" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -428,7 +431,7 @@ const Home = () => {
       </ScrollSection>
 
       {/* Are You Ready CTA - Typography Polish & Faded Visuals */}
-      <ScrollSection direction="left">
+      < ScrollSection direction="left" >
         <div style={{ padding: '140px 0' }}>
           <div className="container">
             <div style={{
@@ -468,7 +471,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </ScrollSection>
+      </ScrollSection >
       <style>{`
         /* Prevent horizontal scroll ONLY on page wrapper */
         .home-page { width: 100%; }
@@ -499,12 +502,12 @@ const Home = () => {
             .desktop-br { display: none !important; }
             .mobile-only-q { display: inline !important; }
 
-            /* Journey Section reordering (Text first) */
-            .journey-header-wrapper { display: flex !important; flex-direction: column-reverse !important; gap: 32px !important; text-align: center !important; align-items: center !important; }
+            /* Journey Section reordering (Text first) - INCREASED SPECIFICITY */
+            .container .journey-header-wrapper { display: flex !important; flex-direction: column-reverse !important; gap: 32px !important; text-align: center !important; align-items: center !important; }
             .journey-text-content { max-width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
 
             /* On Time Delivery reordering & font sizes */
-            .delivery-flex-container { flex-direction: column-reverse !important; gap: 32px !important; text-align: center !important; align-items: center !important; }
+            .container .delivery-flex-container { flex-direction: column-reverse !important; gap: 32px !important; text-align: center !important; align-items: center !important; display: flex !important; }
             .delivery-flex-container > div:first-of-type { max-width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
             .delivery-header { font-size: 2.2rem !important; }
             .delivery-stat-number { font-size: 3.5rem !important; }
@@ -527,6 +530,21 @@ const Home = () => {
                 width: 50% !important;
                 height: 100% !important;
             }
+
+            /* Why Cards padding refinement */
+            .why-card { padding: 40px 24px !important; }
+            .why-card h3 { font-size: 1.6rem !important; }
+            .why-card p { font-size: 1rem !important; }
+
+            /* Solution Cards mobile alignment */
+            .solution-card { flex-direction: column !important; align-items: flex-start !important; padding: 32px !important; gap: 20px !important; }
+            .solution-icon-wrapper { padding: 12px !important; margin-bottom: 8px !important; }
+            .solution-card h3 { font-size: 1.45rem !important; text-align: left !important; }
+            .solution-card p { text-align: left !important; }
+
+            /* Delivery image alignment */
+            .delivery-image-container { width: 100% !important; height: 260px !important; margin-bottom: 24px !important; border-radius: 30px !important; display: block !important; }
+            .delivery-flex-container { padding: 40px 20px !important; }
 
             /* Adjust padding for mobile */
             [style*="padding: 64px"], [style*="padding: 72px"] { padding: 30px 20px !important; }
@@ -560,7 +578,7 @@ const Home = () => {
             [style*="fontSize: 4.8rem"], [style*="fontSize: 4.2rem"] { font-size: 2rem !important; }
         }
     `}</style>
-    </div>
+    </div >
   );
 };
 
